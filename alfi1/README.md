@@ -19,4 +19,6 @@ Pada program ini, digunakan LocalStorage untuk menyimpan data sementara waktu, s
 
 ## Preview dan Demo
 
-Untuk mencoba demo, silakan kunjungi [tautan ini](https://candradwicahyo.github.io/website-kedai-kopi)
+Untuk mencoba demo, silakan kunjungi [tautan ini](https://github.com/andrinoviand/websiteirgtschool)
+
+link video presentasi final project : https://youtu.be/LhCm0nGpQ1E
