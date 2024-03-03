@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #0ac3f1;
+  --background: #085bf5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+  z-index: 9999;
+}
+
+.navbar.active {
+  background: #f1f1f1;
+}
+
+.navbar .navbar-logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-list-group .navbar-list {
+  position: relative;
+  padding: 10px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.navbar .navbar-list-group .navbar-list:hover,
+.navbar .navbar-icon #shopping-cart.active {
+  color: var(--primary);
+}
+
+.navbar .navbar-icon .icon {
+  font-size: 22px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.navbar.active .navbar-logo,
+.navbar.active .navbar-list-group .navbar-list,
+.navbar.active .navbar-icon .icon {
+  color: #333;
+}
+
+.navbar .navbar-icon #hamburger {
+  display: none;
+}
+
+.navbar .navbar-icon #shopping-cart {
+  position: relative;
+  transition: 0.5s;
+}
+
+/* hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url('image/depan\ sekolah.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.7;
+}
+
+.hero .content {
+  position: relative;
+  padding: 0 60px;
+}
+
+.hero .content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 2.1rem;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #f3f3f3;
+  margin: 10px 0;
+  line-height: 1.4rem;
+  width: 70%;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: var(--primary);
+  cursor: pointer;
+  color: #fff;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.2;
+  transition: 0.5s ease;
+}
+
+.button:hover::before {
+  left: 0;
+}
+
+/* about section */
+.about,
+.product,
+.contact {
+  position: relative;
+  width: 100%;
+  padding: 90px 60px 20px 60px;
+}
+
+.about h2,
+.product h2,
+.contact h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about h2 span,
+.product h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row,
+.contact .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .row .image-wrapper,
+.about .row .content,
+.contact .row .image-wrapper,
+.contact .row .form-wrapper {
+  position: relative;
+}
+
+.about .row .image-wrapper,
+.contact .row .image-wrapper {
+  width: 50%;
+}
+
+.about .row .image-wrapper .image,
+.contact .row .image-wrapper .image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content,
+.contact .row .form-wrapper {
+  width: 40%;
+}
+
+.about .row .content h3 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about .row .content p {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 1.4rem;
+}
+
+/* menu section */
+.product .header p,
+.contact .header p {
+  width: 60%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.product .card-container {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product .card-container .card {
+  position: relative;
+  width: 30%;
+  overflow: hidden;
+  margin: 10px 5px;
+}
+
+.product .card-container .card .card-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product .card-container .card h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product .card-container .card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.form-group {
+  position: relative;
+  display: block;
+}
+
+.form-group .label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-group .input {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: #f4f7fe;
+  margin: 10px 0;
+}
+
+/* footer */
+.footer{
+  background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%
+  }
+}
+
+/* mobile screen */
+@media screen and (max-width: 768px) {
+  
+  .navbar,
+  .hero .content {
+    padding: 0 20px;
+  }
+  
+  .navbar .navbar-list-group {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0;
+    transition: 0.5s;
+  }
+  
+  .navbar .navbar-list-group.active {
+    right: 0;
+  }
+  
+  .navbar .navbar-list-group .navbar-list {
+    padding: 20px 30px;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .navbar .navbar-list-group .navbar-list:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-icon #hamburger {
+    display: inline-block;
+  }
+  
+
+
+  /* prestasi siswa */
+  @media (max-width:990px) {
+    .tranding-slider-control .swiper-button-next {
+      left: 70% !important;
+      transform: translateX(-70%) !important;
+    }
+  }
+  @media (max-width:450px) {
+    .tranding-slider-control .swiper-button-next {
+      left: 80% !important;
+      transform: translateX(-80%) !important;
+    }
+  }
+  @media (max-width:990px) {
+    .tranding-slider-control .swiper-button-prev {
+      left: 30% !important;
+      transform: translateX(-30%) !important;
+    }
+  }
+  @media (max-width:450px) {
+    .tranding-slider-control .swiper-button-prev {
+      left: 20% !important;
+      transform: translateX(-20%) !important;
+    }
+  }
+}
